@@ -1,4 +1,4 @@
-package repository.supplier.Impl;
+package repository.custom.Impl;
 
 import entity.SupplierEntity;
 import javafx.collections.FXCollections;
@@ -6,7 +6,7 @@ import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import repository.supplier.SupplierDao;
+import repository.custom.SupplierDao;
 import util.HybernateUtil;
 
 import java.util.List;

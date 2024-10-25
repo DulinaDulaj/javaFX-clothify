@@ -1,17 +1,13 @@
-package service.supplier.Impl;
+package service.custom.Impl;
 
-import dto.Employee;
 import dto.Supplier;
-import entity.EmployeeEntity;
 import entity.SupplierEntity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.modelmapper.ModelMapper;
 import repository.DaoFactory;
-import repository.SuperDao;
-import repository.employee.EmployeeDao;
-import repository.supplier.SupplierDao;
-import service.supplier.SupplierService;
+import repository.custom.SupplierDao;
+import service.custom.SupplierService;
 import util.DaoType;
 
 public class SupplierServiceImpl implements SupplierService {

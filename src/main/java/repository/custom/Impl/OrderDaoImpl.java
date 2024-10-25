@@ -1,6 +1,5 @@
-package repository.order.Impl;
+package repository.custom.Impl;
 
-import entity.EmployeeEntity;
 import entity.ItemEntity;
 import entity.OrderDetailEntity;
 import entity.OrderEntity;
@@ -8,7 +7,7 @@ import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import repository.order.OrderDao;
+import repository.custom.OrderDao;
 import util.HybernateUtil;
 
 import java.util.List;

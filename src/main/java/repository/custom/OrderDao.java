@@ -1,12 +1,12 @@
-package service.order;
+package repository.custom;
 
 import entity.OrderDetailEntity;
 import entity.OrderEntity;
-import service.SuperService;
+import repository.CrudRepository;
 
 import java.util.List;
 
-public interface OrderService extends SuperService {
+public interface OrderDao extends CrudRepository<OrderEntity> {
     boolean placeOrder(OrderEntity orderEntity, List<OrderDetailEntity> orderDetails);
-    OrderEntity searchOrder(String orderID);
+    OrderEntity searchOrder(String id);
 }

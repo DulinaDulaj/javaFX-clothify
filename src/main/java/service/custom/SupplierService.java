@@ -1,7 +1,6 @@
-package service.supplier;
+package service.custom;
 
 import dto.Supplier;
-import entity.EmployeeEntity;
 import entity.SupplierEntity;
 import javafx.collections.ObservableList;
 import service.SuperService;

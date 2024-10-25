@@ -1,10 +1,9 @@
 package repository;
 
-import repository.employee.Impl.EmployeeDaoImpl;
-import repository.item.Impl.ItemDaoImpl;
-import repository.order.Impl.OrderDaoImpl;
-import repository.supplier.Impl.SupplierDaoImpl;
-import service.supplier.Impl.SupplierServiceImpl;
+import repository.custom.Impl.EmployeeDaoImpl;
+import repository.custom.Impl.ItemDaoImpl;
+import repository.custom.Impl.OrderDaoImpl;
+import repository.custom.Impl.SupplierDaoImpl;
 import util.DaoType;
 
 public class DaoFactory {

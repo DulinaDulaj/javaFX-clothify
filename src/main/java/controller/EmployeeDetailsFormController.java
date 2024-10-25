@@ -12,7 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import service.Employee.EmployeeService;
+import service.custom.EmployeeService;
 import service.ServiceFactory;
 import util.ServiceType;
 

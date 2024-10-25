@@ -2,7 +2,6 @@ package controller;
 
 import com.jfoenix.controls.JFXTextField;
 import dto.Supplier;
-import entity.EmployeeEntity;
 import entity.SupplierEntity;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,10 +12,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import service.Employee.EmployeeService;
 import service.ServiceFactory;
-import service.SuperService;
-import service.supplier.SupplierService;
+import service.custom.SupplierService;
 import util.ServiceType;
 
 import java.io.IOException;

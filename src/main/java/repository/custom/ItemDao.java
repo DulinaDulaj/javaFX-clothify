@@ -1,6 +1,5 @@
-package repository.item;
+package repository.custom;
 
-import entity.EmployeeEntity;
 import entity.ItemEntity;
 import repository.CrudRepository;
 

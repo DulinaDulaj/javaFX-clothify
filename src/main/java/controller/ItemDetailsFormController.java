@@ -17,9 +17,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import repository.DaoFactory;
-import repository.supplier.SupplierDao;
+import repository.custom.SupplierDao;
 import service.ServiceFactory;
-import service.item.ItemService;
+import service.custom.ItemService;
 import util.DaoType;
 import util.ServiceType;
 

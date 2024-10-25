@@ -1,11 +1,9 @@
-package service.Employee;
+package service.custom;
 
 import dto.Employee;
 import entity.EmployeeEntity;
 import javafx.collections.ObservableList;
 import service.SuperService;
-
-import java.util.List;
 
 public interface EmployeeService extends SuperService {
     boolean addCustomer(Employee employee);

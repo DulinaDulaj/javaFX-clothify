@@ -1,14 +1,12 @@
-package repository.employee.Impl;
+package repository.custom.Impl;
 
 import entity.EmployeeEntity;
-import entity.ItemEntity;
-import entity.SupplierEntity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import repository.employee.EmployeeDao;
+import repository.custom.EmployeeDao;
 import util.HybernateUtil;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package repository.employee;
+package repository.custom;
 
 import entity.EmployeeEntity;
 import repository.CrudRepository;

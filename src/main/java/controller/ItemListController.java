@@ -8,7 +8,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import repository.DaoFactory;
-import repository.item.ItemDao;
+import repository.custom.ItemDao;
 import util.DaoType;
 
 import java.net.URL;

@@ -1,4 +1,4 @@
-package repository.supplier;
+package repository.custom;
 
 
 import entity.SupplierEntity;
