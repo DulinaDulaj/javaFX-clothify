@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeDetailPane" prefHeight="473.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeDetailsFormController">
+   <children>
+      <Label prefHeight="62.0" prefWidth="680.0" style="-fx-background-color: black;" text="                 Employee Details" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="33.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmployee" layoutX="46.0" layoutY="213.0" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="179.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="190.0" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="230.0" text="Email" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="565.0" layoutY="85.0" onAction="#employeeAddOnAction" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #28a745;" text="Add">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="567.0" layoutY="168.0" onAction="#employeeUpdateOnAction" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #fd7e14;" text="Update">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="566.0" layoutY="128.0" onAction="#employeeDeleteOnAction" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #f54242;" text="Delete">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtId" layoutX="132.0" layoutY="86.0" promptText="Enter ID" />
+      <JFXTextField fx:id="txtName" layoutX="305.0" layoutY="86.0" promptText="Enter Name" />
+      <JFXTextField fx:id="txtEmail" layoutX="134.0" layoutY="141.0" promptText="Enter Email" />
+      <JFXButton layoutX="311.0" layoutY="422.0" onAction="#btnReloadOnAction" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: black;" text="reload" textFill="#eeeaea">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="617.0" layoutY="423.0" onAction="#backOnAction" style="-fx-background-color: black;" text="← " textFill="#fffafa">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="502.0" layoutY="172.0" onAction="#btnClearOnAction" prefHeight="18.0" prefWidth="52.0" style="-fx-background-color: black;" text="clear" textFill="#eeeaea">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtPassword" layoutX="307.0" layoutY="141.0" promptText="Password" />
+      <Label layoutX="293.0" layoutY="177.0" prefHeight="17.0" prefWidth="183.0" text="password for employee account" textFill="RED" />
+   </children>
+</AnchorPane>

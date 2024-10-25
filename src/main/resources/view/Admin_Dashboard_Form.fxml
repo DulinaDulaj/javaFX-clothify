@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdminDashboardPane" prefHeight="473.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashboardFormController">
+   <children>
+      <Label layoutY="-3.0" prefHeight="55.0" prefWidth="670.0" style="-fx-background-color: black;" text="                  Admin Dashboard" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="33.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="236.0" layoutY="109.0" onAction="#employeeDetailsOnAction" prefHeight="55.0" prefWidth="223.0" style="-fx-background-color: c3bfbf;" text="Employee Details" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="236.0" layoutY="192.0" onAction="#orderDetailsOnAction" prefHeight="55.0" prefWidth="223.0" style="-fx-background-color: c3bfbf;" text="Order Details" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="236.0" layoutY="277.0" onAction="#supplierDetailsOnAction" prefHeight="55.0" prefWidth="223.0" style="-fx-background-color: c3bfbf;" text=" Supplier Details" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="236.0" layoutY="361.0" onAction="#ItemDetailsOnAction" prefHeight="55.0" prefWidth="223.0" style="-fx-background-color: c3bfbf;" text="Item Details" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="602.0" layoutY="432.0" onAction="#backOnAction" style="-fx-background-color: black;" text="← " textFill="#fffafa">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
