@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="itemDetailPane" prefHeight="473.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemDetailsFormController">
+<AnchorPane fx:id="itemDetailPane" prefHeight="473.0" prefWidth="670.0" style="-fx-background-color: #3cd6c7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemDetailsFormController">
    <children>
       <Label layoutY="-1.0" prefHeight="62.0" prefWidth="680.0" style="-fx-background-color: black;" text="                    Item Details" textFill="WHITE">
          <font>

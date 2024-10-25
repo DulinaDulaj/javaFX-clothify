@@ -22,12 +22,12 @@ public class OrderEntity {
 
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
-    private Date orderDate;
+    private String orderDate;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<OrderDetailEntity> orderDetails;
 
-    public OrderEntity(String orderId, Date orderDate) {
+    public OrderEntity(String orderId, String orderDate) {
         this.orderId = orderId;
         this.orderDate = orderDate;
     }

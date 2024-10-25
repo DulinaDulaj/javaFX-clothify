@@ -7,22 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="resgisterAdminPane" prefHeight="473.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterAdminFormController">
+<AnchorPane fx:id="resgisterAdminPane" prefHeight="473.0" prefWidth="670.0" style="-fx-background-color: #3cd6c7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterAdminFormController">
    <children>
-      <JFXTextField layoutX="208.0" layoutY="202.0" prefHeight="36.0" prefWidth="271.0" promptText="enter email here" />
-      <JFXPasswordField layoutX="207.0" layoutY="263.0" prefHeight="25.0" prefWidth="271.0" promptText="password" />
-      <JFXButton layoutX="208.0" layoutY="365.0" prefHeight="25.0" prefWidth="271.0" style="-fx-background-color: black;" text="Register" textFill="WHITE">
+      <JFXTextField fx:id="txtemail" layoutX="208.0" layoutY="202.0" prefHeight="36.0" prefWidth="271.0" promptText="enter email here" />
+      <JFXPasswordField fx:id="txtpassword" layoutX="207.0" layoutY="263.0" prefHeight="25.0" prefWidth="271.0" promptText="password" />
+      <JFXButton layoutX="208.0" layoutY="365.0" onAction="#registerOnAction" prefHeight="25.0" prefWidth="271.0" style="-fx-background-color: black;" text="Register" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
       </JFXButton>
-      <JFXPasswordField layoutX="208.0" layoutY="313.0" prefHeight="25.0" prefWidth="271.0" promptText="conform password" />
+      <JFXPasswordField fx:id="txtconformPass" layoutX="208.0" layoutY="313.0" prefHeight="25.0" prefWidth="271.0" promptText="conform password" />
       <JFXButton layoutX="308.0" layoutY="411.0" onAction="#loadAdminLoginPageOnAction" text="login now">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </JFXButton>
-      <Label layoutX="243.0" layoutY="139.0" prefHeight="26.0" prefWidth="171.0" text="Admin Registation">
+      <Label layoutX="243.0" layoutY="139.0" prefHeight="26.0" prefWidth="171.0" text="Admin Registation" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="17.0" />
          </font>

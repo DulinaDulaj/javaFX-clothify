@@ -4,6 +4,9 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import dto.CartTM;
 import entity.*;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,6 +18,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import javafx.util.Duration;
 import repository.DaoFactory;
 import repository.custom.EmployeeDao;
 import repository.custom.ItemDao;
@@ -27,6 +31,8 @@ import util.ServiceType;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -55,7 +61,12 @@ public class EmployeePlaceOrderFormController implements Initializable {
     public TextField txtSize;
 
     public TableColumn colSize;
+
     public JFXTextField txtOrId;
+
+    public Label lblTime;
+
+    public Label lblDate;
 
     @FXML
     private JFXComboBox<String> cmbEmployeeID;
@@ -110,15 +121,11 @@ public class EmployeePlaceOrderFormController implements Initializable {
 
     public void placeOrderOnAction(ActionEvent actionEvent) {
         try {
-            // Step 1: Fetch the OrderService from ServiceFactory
             OrderService orderService = ServiceFactory.getInstance().getServiceType(ServiceType.ORDER);
+            String orderId = txtOrId.getText();
+            String orderDate =lblDate.getText();
+            String employeeId = cmbEmployeeID.getValue();
 
-            // Step 2: Create a new OrderEntity
-            String orderId = txtOrId.getText();  // Get the order ID from the label
-            Date orderDate = new Date();  // Current date as the order date
-            String employeeId = cmbEmployeeID.getValue();  // Get the employee ID from the combo box
-
-            // Fetch the EmployeeEntity based on employeeId
             EmployeeService employeeService = ServiceFactory.getInstance().getServiceType(ServiceType.EMPLOYEE);
             EmployeeEntity employeeEntity = employeeService.searchEmployeeById(employeeId);
 
@@ -127,22 +134,20 @@ public class EmployeePlaceOrderFormController implements Initializable {
                 return;
             }
 
-            // Create the OrderEntity
+
             OrderEntity orderEntity = new OrderEntity(orderId, orderDate);
 
-            // Step 3: Prepare OrderDetailEntity list
+
             List<OrderDetailEntity> orderDetails = new ArrayList<>();
 
             cartTMS.forEach(obj -> {
-                String itemCode = obj.getItemCode();  // Assuming cartTMS provides this data
-                Integer quantity = obj.getQty();  // Assuming cartTMS provides this data
+                String itemCode = obj.getItemCode();
+                Integer quantity = obj.getQty();
 
-                // Create an OrderDetailEntity for each item in the cart
                 OrderDetailEntity orderDetail = new OrderDetailEntity(orderEntity, itemCode, quantity);
                 orderDetails.add(orderDetail);
             });
 
-            // Step 4: Call the placeOrder method and display a message based on the result
             if (orderService.placeOrder(orderEntity, orderDetails)) {
                 new Alert(Alert.AlertType.INFORMATION, "Successfully placed an Order!").show();
             } else {
@@ -189,6 +194,7 @@ public class EmployeePlaceOrderFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cmbItemCode.setItems(getItemCodes());
         cmbEmployeeID.setItems(getEmployeeIds());
+        loadDateAndTime();
 
         cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newVal) -> {
             if (newVal!=null){
@@ -237,6 +243,23 @@ public class EmployeePlaceOrderFormController implements Initializable {
         });
 
         return itemCodes;
+
+    }
+    private void loadDateAndTime() {
+        Date date = new Date();
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+        String dateNow = f.format(date);
+        lblDate.setText(dateNow);
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            LocalTime now = LocalTime.now();
+            lblTime.setText(now.getHour() + " : " + now.getMinute() + " : " + now.getSecond());
+        }),
+                new KeyFrame(Duration.seconds(1))
+        );
+
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
 
     }
 

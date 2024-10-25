@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="473.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StartingPageFormController">
    <children>
-      <AnchorPane fx:id="loginPane" layoutX="4.0" prefHeight="474.0" prefWidth="670.0">
+      <AnchorPane fx:id="loginPane" layoutX="-6.0" prefHeight="474.0" prefWidth="681.0" style="-fx-background-color: #3cd6c7;">
          <children>
             <Button fx:id="btnadminPage" layoutX="194.0" layoutY="204.0" mnemonicParsing="false" onAction="#btnadminPageOnAction" prefHeight="45.0" prefWidth="290.0" style="-fx-background-color: black;" text="Admin" textFill="#f7f7f7">
                <font>
@@ -18,7 +18,7 @@
                   <Font name="Arial Black" size="21.0" />
                </font>
             </Button>
-            <Label layoutX="-4.0" prefHeight="108.0" prefWidth="675.0" style="-fx-background-color: black;" text="                DON CLOTHING" textFill="#eeeaea">
+            <Label layoutX="-4.0" prefHeight="108.0" prefWidth="687.0" style="-fx-background-color: black;" text="                DON CLOTHING" textFill="#eeeaea">
                <font>
                   <Font name="Arial Black" size="35.0" />
                </font>

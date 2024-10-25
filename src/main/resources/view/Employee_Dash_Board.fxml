@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="homePagePane" prefHeight="473.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeDashBoardFormController">
+<AnchorPane fx:id="homePagePane" prefHeight="473.0" prefWidth="670.0" style="-fx-background-color: #c3adf0;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeDashBoardFormController">
    <children>
       <Label layoutY="-1.0" prefHeight="57.0" prefWidth="670.0" style="-fx-background-color: grey;" text="                 Employee HomePage" textFill="WHITE">
          <font>

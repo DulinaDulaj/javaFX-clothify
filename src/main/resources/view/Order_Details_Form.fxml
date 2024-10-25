@@ -8,29 +8,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="OrderDetailPane" prefHeight="473.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderDetailsFormController">
+<AnchorPane fx:id="OrderDetailPane" prefHeight="473.0" prefWidth="670.0" style="-fx-background-color: #3cd6c7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderDetailsFormController">
    <children>
       <Label layoutX="-2.0" layoutY="-1.0" prefHeight="62.0" prefWidth="680.0" style="-fx-background-color: black;" text="                      Order Details" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="33.0" />
          </font>
       </Label>
-      <TableView layoutX="44.0" layoutY="212.0" prefHeight="200.0" prefWidth="600.0">
+      <TableView fx:id="tblOrders" layoutX="44.0" layoutY="212.0" prefHeight="200.0" prefWidth="600.0">
          <columns>
-            <TableColumn prefWidth="194.0" text="Order ID" />
-            <TableColumn prefWidth="210.0" text="Date" />
-            <TableColumn prefWidth="195.0" text="Employee ID" />
+            <TableColumn fx:id="colOrId" prefWidth="296.0" text="Order ID" />
+            <TableColumn fx:id="colDateTime" prefWidth="303.0" text="Date And Time" />
          </columns>
       </TableView>
-      <JFXButton layoutX="564.0" layoutY="127.0" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #f54242;" text="Delete">
+      <JFXButton layoutX="522.0" layoutY="119.0" onAction="#deleteOnAction" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #f54242;" text="Delete">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </JFXButton>
-      <JFXTextField layoutX="66.0" layoutY="124.0" />
-      <JFXTextField layoutX="238.0" layoutY="124.0" />
-      <JFXTextField layoutX="404.0" layoutY="124.0" />
-      <JFXButton layoutX="309.0" layoutY="421.0" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: black;" text="reload" textFill="#eeeaea">
+      <JFXTextField fx:id="txtOrId" layoutX="158.0" layoutY="121.0" />
+      <JFXTextField fx:id="txtDate" layoutX="330.0" layoutY="121.0" />
+      <JFXButton layoutX="309.0" layoutY="421.0" onAction="#reloadOnAction" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: black;" text="reload" textFill="#eeeaea">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>

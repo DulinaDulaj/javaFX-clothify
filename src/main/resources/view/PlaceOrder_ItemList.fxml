@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="473.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemListController">
+<AnchorPane prefHeight="473.0" prefWidth="414.0" style="-fx-background-color: #c3adf0;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemListController">
    <children>
       <Label layoutY="-1.0" prefHeight="42.0" prefWidth="414.0" style="-fx-background-color: #797979;" text="              Item List" textFill="WHITE">
          <font>
