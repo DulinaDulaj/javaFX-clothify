@@ -22,6 +22,7 @@ import javafx.util.Duration;
 import repository.DaoFactory;
 import repository.custom.EmployeeDao;
 import repository.custom.ItemDao;
+import repository.custom.OrderDao;
 import service.custom.EmployeeService;
 import service.ServiceFactory;
 import service.custom.ItemService;
@@ -67,6 +68,8 @@ public class EmployeePlaceOrderFormController implements Initializable {
     public Label lblTime;
 
     public Label lblDate;
+
+    public Label lblOrderId;
 
     @FXML
     private JFXComboBox<String> cmbEmployeeID;
@@ -122,7 +125,7 @@ public class EmployeePlaceOrderFormController implements Initializable {
     public void placeOrderOnAction(ActionEvent actionEvent) {
         try {
             OrderService orderService = ServiceFactory.getInstance().getServiceType(ServiceType.ORDER);
-            String orderId = txtOrId.getText();
+            String orderId = lblOrderId.getText();
             String orderDate =lblDate.getText();
             String employeeId = cmbEmployeeID.getValue();
 
@@ -195,12 +198,27 @@ public class EmployeePlaceOrderFormController implements Initializable {
         cmbItemCode.setItems(getItemCodes());
         cmbEmployeeID.setItems(getEmployeeIds());
         loadDateAndTime();
+        setOrderID();
+
+
 
         cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observableValue, s, newVal) -> {
             if (newVal!=null){
                 searchItem(newVal);
             }
         });
+
+    }
+    public void setOrderID(){
+        OrderDao orderDao = DaoFactory.getInstance().getDaoType(DaoType.ORDER);
+        Long orderCount= orderDao.getOrderCount()+1;
+        if(orderCount<10){
+            lblOrderId.setText("R100"+orderCount);
+        }else if(orderCount<100){
+            lblOrderId.setText("R10"+orderCount);
+        }else{
+            lblOrderId.setText("R1"+orderCount);
+        }
 
     }
     private void calcNetTotal(){

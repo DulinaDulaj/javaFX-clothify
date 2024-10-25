@@ -39,6 +39,14 @@ public class EmployeeDashBoardFormController {
     }
 
     public void orderDetailsOnAction(ActionEvent actionEvent) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Orders_Form.fxml"));
+        AnchorPane dashboardPane = null;
+        try {
+            dashboardPane = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        homePagePane.getChildren().setAll(dashboardPane);
     }
 
     public void backOnAction(ActionEvent actionEvent) {

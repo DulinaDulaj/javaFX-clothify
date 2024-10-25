@@ -94,6 +94,12 @@ public class OrderDaoImpl implements OrderDao {
         }
         return orderList;
     }
+    public Long getOrderCount(){
+        Session session = HybernateUtil.getSession();
+        Long count = (Long) session.createQuery("SELECT COUNT(e) FROM OrderEntity e").uniqueResult();
+        session.close();
+        return count;
+    }
 
     @Override
     public boolean validateLogin(String email, String enteredPassword) {
